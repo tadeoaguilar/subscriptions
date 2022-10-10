@@ -21,8 +21,11 @@ const Home: NextPage = () => {
             IDEAS TO LIGHT YOUR HOME AND SPIRIT
         </div>
         <div className={styles.hero2} >
-            <p> Learn from +100,000 experiences from all around the world.</p>
+            <p> Learn from <span className={styles.accent}>+100,000</span> experiences from all around the world.</p>
 
+        </div>
+        <div className={styles.button} >
+          Subscribe
         </div>
       </div>
      
