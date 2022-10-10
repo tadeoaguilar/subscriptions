@@ -6,6 +6,7 @@ import MenuBar from '../ui/components/MenuBar/MenuBar'
 import HeroText from '../ui/components/HeroText'
 const Home: NextPage = () => {
   return (
+     <div className={styles.frame}>
     <div className={styles.container}>
      
       <div className={styles.container}>
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
       </div>
      
      
+    </div>
     </div>
   )
 }
