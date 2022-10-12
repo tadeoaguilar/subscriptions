@@ -91,3 +91,8 @@
   border-color: #FF19B5;
   border-width: thick;
 }
+.box {
+  width: 200px;
+  height: 200px;
+  background: red;
+}

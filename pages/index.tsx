@@ -4,7 +4,34 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import MenuBar from '../ui/components/MenuBar/MenuBar'
 import HeroText from '../ui/components/HeroText'
+import { motion } from "framer-motion";
+import { title } from 'process'
 const Home: NextPage = () => {
+   const titleAnim = {
+    hidden: { y: 200 },
+    show: {
+      y: 0,
+      transition: { duration: .75, ease: "easeOut" },
+    },
+  };
+  const fade = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { ease: "easeOut", duration: 3 },
+    },
+  };
+
+
+   const btnLtR = {
+    hidden: { x: 60 },
+    show: {
+      x: 0 ,
+      transition: { duration: .75, ease: "easeOut" },
+    },
+  };
+
+
   return (
      <div className={styles.frame}>
     <div className={styles.container}>
@@ -18,21 +45,39 @@ const Home: NextPage = () => {
           </div>
           <MenuBar title='Str'   /> 
         </div>
-        <div className={styles.hero1} >
-            IDEAS TO LIGHT YOUR HOME AND SPIRIT
-        </div>
-        <div className={styles.hero2} >
-            <p> Learn from <span className={styles.accent}>+100,000</span> experiences from all around the world.</p>
+        <motion.div className={styles.hero1} 
+                  variants={titleAnim}
+                   animate="show"
+                   initial= "hidden"
+                   
+                   
+                   >
+            <p > IDEAS TO LIGHT YOUR HOME AND SPIRIT </p>
+        </motion.div>
+        <motion.div className={styles.hero2} 
+                    variants= {fade}
+                    animate="show"
+                    initial="hidden"
+        >
+            <p > Learn from <span className={styles.accent}>+100,000</span> experiences from all around the world.</p>
 
-        </div>
-        <div className={styles.button} >
+        </motion.div>
+        <motion.div  
+                className={styles.button} 
+                variants= {btnLtR}
+                animate="show"
+                initial="hidden"
+        >
           Subscribe
-        </div>
+        </motion.div>
       </div>
-     
+      
      
     </div>
+    
+    
     </div>
+    
   )
 }
 
