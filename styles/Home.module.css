@@ -1,25 +1,24 @@
 
 .container {
   display: flex;
+  flex-direction :column;  
   margin:auto;
   position:relative ;
   background-color:#006366;
-
-
-
-
 }
-
-.landingImage {
-  
-    position:relative ;
-  
+.frame {
+  display: flex;
+  flex-direction :column;  
+  margin:auto;
+  position:relative ;
+  background-color:#006366;
 }
-.navbar {
-  
+.landingImage { 
+    position:relative ;  
+}
+.navbar {  
   display:flex;
-  margin: 10px 5% 10px;
-  
+  margin: 10px 5% 10px;  
   width: 90%;
   position:absolute ;
   align-items:center;
@@ -35,64 +34,8 @@
   align-items:center;
   width:auto;
 }
-
-.hero1{
-  color: #FF19B5;
-  font-family: Merryweather;
-  font-size: 4rem;
-  position: absolute;
-  margin: 10px 5% 10px;
-  width: 50.6%;
-  top: 26.375%
+.logoTxt{
+  padding-left:1rem;
 }
 
-.hero2{
-  display:flex;
-  font-family: Merryweather;
-  font-weight: bold;
-  color:#006366;
-  font-size:24px;
-  position: absolute;
-  margin-left:  5% ;
-  width: 544px;
-  top: 61.5%;
-  margin-bottom:10px;
-}
 
-.accent {
-  color:#FF19B5;
-}
-.button {
-  display:flex;
-  position: absolute;
-  align-items:center;
-  font-size:1rem;
-  font-family:Roboto;
-  
-  font-weight:bold;
-  justify-content:center;
-  border-radius: 5px;
-  color:#ffffff;
-  height:52px;
-  width:7.45rem;
-  top: 70.5%;
-  
-  background-color:#FF19B5;
-  border-style:solid;
-  border-color: #006366;
-  border-width: thick;
-  margin: 16px 5% 10px;
-}
-
-.button:hover{
-  background-color:transparent;
-  color: #006366;
-  border-style:solid;
-  border-color: #FF19B5;
-  border-width: thick;
-}
-.box {
-  width: 200px;
-  height: 200px;
-  background: red;
-}
